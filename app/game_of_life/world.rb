@@ -9,7 +9,7 @@ class World
 
   def initialize(args)
     @cells = []
-    args.fetch(:starting_position, '').each do |x, y|
+    args.fetch(:starting_position, []).each do |x, y|
       @cells << AliveCell.new(x: x, y: y, world: self)
     end
     pre_processing
@@ -23,10 +23,6 @@ class World
   def next_generation
     pre_processing
     @cells = @cells.map(&:evolve)
-  end
-
-  def to_s
-    @cells.sort_by { |cell| [cell.x, cell.y] }
   end
 
   private
