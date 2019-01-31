@@ -8,10 +8,11 @@ TUBE = { form: [[1,0], [0,1], [2,1], [1,2]], size: [3,3], name: 'Tube', code: 5 
 STILL = [BLOCK, BEEHIVE, BOAT, LOAF, TUBE]
 
 # Oscillaters
-BLINKER = { form: [[0,0],[1,0],[2,0]], size: [3,1], name: 'Blinker', code: 6 }
-TOAD = { form: [[1,0],[2,0],[3,0],[0,1],[1,1],[2,1]], size: [4,2], name: 'Toad', code: 7 }
+BLINKER = { form: [[0,0],[1,0],[2,0]], size: [3,1], name: 'Blinker', code: 6, period: 2 }
+TOAD = { form: [[1,0],[2,0],[3,0],[0,1],[1,1],[2,1]], size: [4,2],
+         name: 'Toad', code: 7, period: 2 }
 BEACON = { form: [[0,0], [1,1], [0,1], [1,0], [2,2], [2,3], [3,2], [3,3]], size: [4,4],
-           name: 'Block', code: 8 }
+           name: 'Block', code: 8, period: 2 }
 PULSAR = { form: [[2,0], [3,0], [4,0], [8,0], [9,0], [10,0],
                   [0,2], [5,2], [7,2], [12,2],
                   [0,3], [5,3], [7,3], [12,3],
@@ -22,14 +23,14 @@ PULSAR = { form: [[2,0], [3,0], [4,0], [8,0], [9,0], [10,0],
                   [0,9], [5,9], [7,9], [12,9],
                   [0,10], [5,10], [7,10], [12,10],
                   [2,12], [3,12], [4,12], [8,12], [9,12], [10,12],
-                  ], size: [12, 12], name: 'Pulsar', code: 9 }
+                  ], size: [12, 12], name: 'Pulsar', code: 9, period: 3 }
 PENTADECATHLON = { form: [[1,0], [0,1], [1,1], [2,1],
                           [0,4], [1,4], [2,4],
                           [0,6], [2,6],
                           [0,7], [2,7],
                           [0,9], [1,9], [2,9],
                           [0,12], [1,12], [2,12],[1,13]
-                         ], size: [3,13], name: 'Pentadecathlon', code: 10 }
+                         ], size: [3,13], name: 'Pentadecathlon', code: 10, period: 15 }
 OSCILLATERS = [BLINKER, TOAD, BEACON, PULSAR, PENTADECATHLON]
 
 # spaceships

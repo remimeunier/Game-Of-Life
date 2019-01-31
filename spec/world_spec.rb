@@ -1,6 +1,7 @@
 require './app/game_of_life/world'
 require './app/game_of_life/alive_cell'
 require './app/game_of_life/dead_cell'
+require './app/utils/basic_patterns'
 
 describe World do
 
@@ -39,4 +40,25 @@ describe World do
     expect(w.cell_at(-1,0).is_a?(DeadCell)).to eq(true)
     expect(w.cell_at(-1,-1).is_a?(DeadCell)).to eq(true)
   end
+
+  it 'still patterns should stay still' do
+    STILL.each do |still_pattern|
+      w = World.new(starting_position: still_pattern[:form])
+      alived = w.cells.select { |cell| cell.is_a?(AliveCell) }
+      w.next_generation
+      expect(w.cells.select { |cell| cell.is_a?(AliveCell) }).to eq(alived)
+    end
+  end
+
+  it 'Oscillators patterns should stay Oscillat' do
+    OSCILLATERS.each do |ocsi_pattern|
+      w = World.new(starting_position: ocsi_pattern[:form])
+      alived = w.cells.select { |cell| cell.is_a?(AliveCell) }
+      (ocsi_pattern[:period]).times do
+        w.next_generation
+      end
+      expect(w.cells.select { |cell| cell.is_a?(AliveCell) }.length).to eq(alived.length)
+    end
+  end
+
 end
