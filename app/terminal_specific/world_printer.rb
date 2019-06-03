@@ -1,7 +1,7 @@
 require './app/game_of_life/alive_cell'
 require 'colorize'
 
-class Printer
+class WorldPrinter
 
   attr_reader :grid
   def initialize(world)
