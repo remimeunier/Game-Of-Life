@@ -1,4 +1,4 @@
-# Parent class. SHould not be initialize itself
+# Parent class. Should not be initialize itself
 class Cell
   attr_reader :world, :x, :y
 

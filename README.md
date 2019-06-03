@@ -8,11 +8,11 @@ This Implementation was developped with Ruby 2.2.1 by Rémi Meunier
    The known univer is every point inbetween of the center of the univer (0,0) and when
    a cell was once alive
 * You can change the rules of the game by changing const in `./app/utils/constants_rules`
-* You can create basi patterns inside `./app/utils/basic_patterns`
+* You can create basic patterns inside `./app/utils/basic_patterns`
 
 ## Get started :
 Assuming you have ruby :
-* Install bundle : `gen bundle install`
+* Install bundle : `gem bundle install`
 * install needed gem : `bundle install`
 
 * Start the game : `ruby ./main.rb`
